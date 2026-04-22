@@ -1,34 +1,31 @@
 import { Link } from 'react-router-dom';
 import './Home.css';
 
-/* ═══════════════════════════════════════════
-   FILL IN YOUR DETAILS HERE
-═══════════════════════════════════════════ */
 const ME = {
-  name:         'Harshitha Kolla',        // ← your full name
-  initials:     'HK',                     // ← your initials
-  role:         'AI & Full Stack Developer',
+  name:         'Harshitha Kolla',        
+  initials:     'HK',                   
+  role:         'Artificial Intelligence Student',
   location:     'Hyderabad, India',
   university:   'Mahindra University',
   degree:       'B.Tech — Artificial Intelligence',
   gpa:          '9.29',
-  phone:        '+91 XXXXX XXXXX',        // ← your phone
-  personalEmail:'harshitha06k@gmail.com', // ← your personal email
-  collegeEmail: 'se23uari065@mahindrauniversity.edu.in', // ← your college email
+  phone:        '+91 8106772562',       
+  personalEmail:'harshitha06k@gmail.com', 
+  collegeEmail: 'se23uari065@mahindrauniversity.edu.in', 
   github:       'https://github.com/harshitha06k',
   linkedin:     'https://linkedin.com/in/harshitha-kolla-1187272ba',
   resume:       '/resume.pdf',
 
   tagline: 'Crafting intelligent systems and beautiful web experiences — one commit at a time.',
 
-  about: "I'm an Artificial Intelligence student at Mahindra University, Hyderabad. I love building things that sit at the intersection of smart engineering and thoughtful design — from ML pipelines to full-stack web applications.",
+  about: "I’m an Artificial Intelligence student at Mahindra University, with a strong interest in building intelligent and practical solutions. My work combines machine learning and software development, where I design predictive models and translate them into usable applications. I enjoy solving real-world problems through data-driven approaches while focusing on clean, efficient, and user-friendly systems.",
 
-  research: 'Machine Learning · Deep Neural Networks · Natural Language Processing · Predictive Analytics · Full Stack Development',
+  research: 'Machine Learning · Deep Learning · Natural Language Processing · Predictive Analytics . Intelligent Systems  .  Full Stack Developement',
 
   courses: [
     'Object-Oriented Programming', 'Data Structures & Algorithms', 'Machine Learning',
-    'Database Management System',  'Operating System',             'Software Engineering',
-    'Natural Language Processing', 'Deep Neural Networks',
+    'Database Management System',  'Operating System','Computer Networks' ,             'Software Engineering',
+    'Natural Language Processing', 'Deep Neural Networks', 'GenAI & LLM' ,
   ],
 
   skills: {
