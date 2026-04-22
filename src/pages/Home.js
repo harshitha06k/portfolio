@@ -106,10 +106,10 @@ function Home() {
             </div>
             <div className="profile-stat-chip">
               <span className="pstat-num">3×</span>
-              <span className="pstat-label">Merit</span>
+              <span className="pstat-label">Scholarships</span>
             </div>
             <div className="profile-stat-chip">
-              <span className="pstat-num">3</span>
+              <span className="pstat-num">3+</span>
               <span className="pstat-label">Projects</span>
             </div>
           </div>
