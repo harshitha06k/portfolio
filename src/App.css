@@ -1,38 +1,77 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500&display=swap');
+
+:root {
+  --cream:   #f8f4ef;
+  --cream2:  #f0ebe2;
+  --ink:     #1a1a18;
+  --muted:   #8a8478;
+  --accent:  #e8602c;
+  --accent2: #c4501f;
+  --white:   #fdfcfa;
+  --border:  rgba(26,26,24,0.12);
 }
 
-.App-logo {
-  height: 40vmin;
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--cream);
+  color: var(--ink);
+  overflow-x: hidden;
+  cursor: none;
+}
+
+/*
+  CURSOR FIX:
+  JS sets element.style.left and element.style.top to e.clientX / e.clientY.
+  The negative margins shift each element left/up by half its size
+  so the visual center lands exactly on the mouse pointer.
+  We do NOT use transform here — that was overwriting the centering.
+*/
+.cur-dot {
+  position: fixed;
+  top: 0; left: 0;
+  width: 8px; height: 8px;
+  margin-left: -4px;   /* half of 8px */
+  margin-top:  -4px;
+  background: var(--accent);
+  border-radius: 50%;
   pointer-events: none;
+  z-index: 99999;
+  transition: left 0.06s linear, top 0.06s linear;
+  will-change: left, top;
+}
+.cur-ring {
+  position: fixed;
+  top: 0; left: 0;
+  width: 36px; height: 36px;
+  margin-left: -18px;  /* half of 36px */
+  margin-top:  -18px;
+  border: 1.5px solid var(--accent);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 99998;
+  opacity: 0.5;
+  transition: left 0.13s linear, top 0.13s linear;
+  will-change: left, top;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+.page { padding-top: 80px; min-height: 100vh; }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+/* ── ANIMATIONS ── */
+@keyframes fadeUp    { from { opacity:0; transform:translateY(32px);  } to { opacity:1; transform:translateY(0);  } }
+@keyframes fadeIn    { from { opacity:0; }                               to { opacity:1; }                           }
+@keyframes slideRight{ from { opacity:0; transform:translateX(-32px); } to { opacity:1; transform:translateX(0);  } }
 
-.App-link {
-  color: #61dafb;
-}
+.au  { animation: fadeUp     0.8s cubic-bezier(.22,.68,0,1.2) both; }
+.ai  { animation: fadeIn     0.7s ease both; }
+.asr { animation: slideRight 0.7s cubic-bezier(.22,.68,0,1.2) both; }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+.d1 { animation-delay: 0.05s; }
+.d2 { animation-delay: 0.15s; }
+.d3 { animation-delay: 0.25s; }
+.d4 { animation-delay: 0.35s; }
+.d5 { animation-delay: 0.48s; }
+.d6 { animation-delay: 0.60s; }
+.d7 { animation-delay: 0.72s; }
